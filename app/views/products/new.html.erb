@@ -1,0 +1,38 @@
+<% @page_title = "New Product" %>
+
+<div>
+  <%= form_for @product, url: new_product_path do |f| %>
+
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@product.errors.count, "error") %>
+      </h2>
+      <ul>
+        <% @product.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :product_name %><br>
+    <%= f.text_field :product_name %>
+  </p>
+
+  <p>
+    <%= f.label :unit_price %><br>
+    <%= f.float_field :unit_price %>
+  </p>
+
+  <p>
+    <%= f.label :discount %><br>
+    <%= f.float_area :discount %>
+  </p>
+  <p>
+    <%= f.submit "Submit Product" %>
+  </p>
+
+<% end %>
+</div>

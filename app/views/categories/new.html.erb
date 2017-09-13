@@ -1,0 +1,26 @@
+<% @page_title = "New Category" %>
+<div>
+  <%= form_for @category, url: new_category_path  do |f| %>
+
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@category.errors.count, "error") %>
+      </h2>
+      <ul>
+        <% @category.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p style="width: 100%" type="text" name="user_name" placeholder="Full name" />
+    <%= f.label :category_name %><br>
+    <%= f.text_field :category_name %>
+  </p>
+    <%= f.submit "Make new category" %>
+  </p>
+
+<% end %>
+</div>

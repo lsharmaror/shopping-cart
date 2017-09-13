@@ -1,0 +1,18 @@
+<% @page_title = "Log in" %>
+<h1>Log In</h1>
+<div>
+  <%= form_for :session, url: login_path do |f| %>
+  <p placeholder="Email ID">
+    <%= f.label :email_id %><br>
+    <%= f.text_field :email_id %>
+  </p>
+
+  <p placeholder="Enter password">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </p>
+    <p>
+    <%= f.submit "Login" %>
+  </p>
+ <% end %>
+</div>

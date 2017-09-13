@@ -1,0 +1,59 @@
+<% @page_title = "Sign up" %>
+
+<div>
+  <%= form_for @user, url: sign_up_path do |f| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %>
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p style="width: 100%" type="text" name="user_name" placeholder="Full name" />
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </p>
+
+  <p  style="width: 100%" type="text" name="phone_no" placeholder="Mobile number" />
+    <%= f.label :phone_no %><br>
+    <%= f.text_field :phone_no %>
+  </p>
+
+   <p type="text" name="address" placeholder="Enter Address" />
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </p>
+
+  <p placeholder="Enter Address">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </p>
+
+  <p placeholder="Email ID" />
+    <%= f.label :email_id %><br>
+    <%= f.text_field :email_id %>
+  </p>
+
+  <p placeholder="Enter password" />
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </p>
+
+  <p placeholder="Re-enter password" />
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
+  </p>
+
+  <p>
+    <%= f.submit "Create my account" %>
+  </p>
+
+<% end %>
+</div>

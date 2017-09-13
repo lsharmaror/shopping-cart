@@ -21,6 +21,12 @@ AllCops:
 Metrics/LineLength:
   Max: 100
 
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/MethodLength:
+  Max: 15
+
 # Offense count: 9
 Style/Documentation:
   Exclude:
