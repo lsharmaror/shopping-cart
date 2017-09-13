@@ -2,14 +2,14 @@
 <h1>Log In</h1>
 <div>
   <%= form_for :session, url: login_path do |f| %>
-  <p placeholder="Email ID">
+  <p>
     <%= f.label :email_id %><br>
-    <%= f.text_field :email_id %>
+    <%= f.text_field :email_id, placeholder: 'Email ID' %>
   </p>
 
-  <p placeholder="Enter password">
+  <p>
     <%= f.label :password %><br>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, placeholder: 'Enter password' %>
   </p>
     <p>
     <%= f.submit "Login" %>

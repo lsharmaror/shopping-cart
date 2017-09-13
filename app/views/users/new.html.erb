@@ -16,43 +16,45 @@
     </div>
   <% end %>
 
-  <p style="width: 100%" type="text" name="user_name" placeholder="Full name" />
+  <p>
     <%= f.label :user_name %><br>
-    <%= f.text_field :user_name %>
-  </p>
-
-  <p  style="width: 100%" type="text" name="phone_no" placeholder="Mobile number" />
-    <%= f.label :phone_no %><br>
-    <%= f.text_field :phone_no %>
-  </p>
-
-   <p type="text" name="address" placeholder="Enter Address" />
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
-  </p>
-
-  <p placeholder="Enter Address">
-    <%= f.label :zipcode %><br>
-    <%= f.text_field :zipcode %>
-  </p>
-
-  <p placeholder="Email ID" />
-    <%= f.label :email_id %><br>
-    <%= f.text_field :email_id %>
-  </p>
-
-  <p placeholder="Enter password" />
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </p>
-
-  <p placeholder="Re-enter password" />
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
+    <%= f.text_field :user_name, placeholder: 'Full name',
+                     style: 'width: 100%' %>
   </p>
 
   <p>
-    <%= f.submit "Create my account" %>
+    <%= f.label :phone_no %><br>
+    <%= f.text_field :phone_no, style: 'width: 100%', placeholder: 'Mobile number' %>
+  </p>
+
+   <p>
+    <%= f.label :address %><br>
+    <%= f.text_area :address, placeholder: 'Enter Address' %>
+  </p>
+
+  <p>
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode, placeholder: 'Enter Address' %>
+  </p>
+
+  <p>
+    <%= f.label :email_id %><br>
+    <%= f.text_field :email_id, placeholder: 'Email ID' %>
+  </p>
+
+  <p>
+    <%= f.label :password %><br>
+    <%= f.password_field :password, placeholder: 'Enter password' %>
+  </p>
+
+  <p>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, placeholder: 'Re-enter password' %>
+  </p>
+
+  <p>
+    <%= link_to 'Cancel', root_path, style: 'width: 50%; height: 10%; color: white; background-color: rgb(255,0,0); font-size: 150%; border: none;' %>
+    <%= f.submit "Create my account", style: 'width: 50%; height: 10%; color: white; background-color: rgb(0,200,0); font-size: 150%; border: none;' %>
   </p>
 
 <% end %>
